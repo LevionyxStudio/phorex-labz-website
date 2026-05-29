@@ -14,7 +14,7 @@ const navLinks = [
 ]
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+
   const [activeSection, setActiveSection] = useState("")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
@@ -39,22 +39,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [isMenuOpen])
 
-  useEffect(() => {
-    let rafId: number | null = null
-    const handleScroll = () => {
-      if (rafId !== null) return
-      rafId = requestAnimationFrame(() => {
-        rafId = null
-        const y = window.scrollY
-        setScrolled(y > 20)
-      })
-    }
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      if (rafId !== null) cancelAnimationFrame(rafId)
-    }
-  }, [])
 
   useEffect(() => {
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
@@ -177,16 +161,14 @@ export function Navbar() {
           </button>
 
           {/* Trailing Action */}
-          <div className="hidden md:flex">
-            <Link
-              href={siteConfig.links.discord}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-navbar-join hidden md:flex"
-            >
-              Join Server
-            </Link>
-          </div>
+          <Link
+            href={siteConfig.links.discord}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-navbar-join !hidden md:!inline-flex"
+          >
+            Join Server
+          </Link>
         </div>
       </div>
 

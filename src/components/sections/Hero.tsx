@@ -1,4 +1,6 @@
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
+import { siteConfig } from "@/config/site"
 
 export function Hero() {
   return (
@@ -62,13 +64,13 @@ export function Hero() {
         One server for gaming, coding, music, creativity and good vibes. Free to join, always.
       </p>
         <div className="flex flex-col md:flex-row w-full md:w-auto gap-3 justify-center items-center mt-10 px-4 md:px-0">
-          <button className="btn-primary-animated cursor-pointer w-full md:w-auto min-w-[160px] whitespace-nowrap px-8 py-3.5 rounded-full">
+          <Link href={siteConfig.links.discord} className="btn-primary-animated cursor-pointer w-full md:w-auto min-w-[160px] whitespace-nowrap px-8 py-3.5 rounded-full inline-flex items-center justify-center">
             Join the Server
             <ArrowRight className="w-5 h-5 ml-2" />
-          </button>
-          <button className="btn-secondary-glass cursor-pointer w-full md:w-auto min-w-[160px] whitespace-nowrap px-8 py-3.5 rounded-full">
+          </Link>
+          <Link href="/#features" className="btn-secondary-glass cursor-pointer w-full md:w-auto min-w-[160px] whitespace-nowrap px-8 py-3.5 rounded-full inline-flex items-center justify-center">
             Explore Features
-          </button>
+          </Link>
         </div>
       </div>
 

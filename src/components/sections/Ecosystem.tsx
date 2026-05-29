@@ -54,7 +54,7 @@ function EcoCard({ icon, title, description, iconBg, iconBorder, accentRgb }: Ca
 
 export function Ecosystem() {
   return (
-    <section className="py-24 px-4 md:px-6" id="features">
+    <section className="relative z-10 py-24 px-4 md:px-6" id="features">
       {/* Header */}
       <div className="text-center mb-16">
         <h2 className="font-bold text-3xl md:text-4xl text-white mb-4">
