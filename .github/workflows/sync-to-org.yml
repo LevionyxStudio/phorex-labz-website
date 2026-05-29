@@ -7,22 +7,13 @@ on:
 
 jobs:
   sync:
+    if: github.repository == 'LevionyxStudio/phorex-labz-website'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - name: Check token
-        env:
-          TOKEN: ${{ secrets.ORG_ACCESS_TOKEN }}
-        run: |
-          if [ -z "$TOKEN" ]; then
-            echo "TOKEN IS EMPTY!"
-          else
-            echo "TOKEN exists, length: ${#TOKEN}"
-          fi
 
       - name: Push to Org
         env:
