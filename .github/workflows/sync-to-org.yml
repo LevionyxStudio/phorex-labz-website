@@ -24,9 +24,10 @@ jobs:
             echo "TOKEN exists, length: ${#TOKEN}"
           fi
 
-      - name: Push to Org
+- name: Push to Org
         env:
           TOKEN: ${{ secrets.ORG_ACCESS_TOKEN }}
         run: |
+          git config --unset-all http.https://github.com/.extraheader
           git remote add org https://x-access-token:${TOKEN}@github.com/Phorex-Labz/phorex-labz-website.git
           git push org main --force
