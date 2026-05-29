@@ -24,7 +24,7 @@ jobs:
             echo "TOKEN exists, length: ${#TOKEN}"
           fi
 
-- name: Push to Org
+      - name: Push to Org
         env:
           TOKEN: ${{ secrets.ORG_ACCESS_TOKEN }}
         run: |
