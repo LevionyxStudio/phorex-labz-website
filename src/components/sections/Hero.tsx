@@ -4,13 +4,13 @@ import { siteConfig } from "@/config/site"
 
 export function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center min-h-[60vh] gap-xl mb-xxl px-4 md:px-6">
+    <section className="relative flex flex-col items-center justify-center text-center min-h-[40vh] md:min-h-[60vh] gap-8 md:gap-xl mb-16 md:mb-xxl px-4 md:px-6">
 
       {/* Glow orbs — originate from the top corners of the viewport, beam downward.
           Wrapper extends 10rem above the hero (matching main's pt-40) so the gradient
           source sits at the very top of the page, not the hero boundary.
           No filter, no animation — painted once and free to scroll. */}
-      <div aria-hidden="true" className="absolute -top-40 left-[50%] -translate-x-[50%] w-[100vw] h-[100vh] pointer-events-none z-0">
+      <div aria-hidden="true" className="absolute -top-28 md:-top-40 left-[50%] -translate-x-[50%] w-[100vw] h-[100vh] pointer-events-none z-0">
         {/* White spotlight — from top-left corner of the page */}
         <div style={{
           position: "absolute",
@@ -33,7 +33,7 @@ export function Hero() {
 
       {/* Grid — unchanged */}
       <div
-        className="absolute -top-40 left-[50%] -translate-x-[50%] w-[100vw] h-[100vh] z-0 pointer-events-none bg-grid-white"
+        className="absolute -top-28 md:-top-40 left-[50%] -translate-x-[50%] w-[100vw] h-[100vh] z-0 pointer-events-none bg-grid-white"
         style={{
           WebkitMaskImage: "radial-gradient(ellipse 90% 60% at 50% 50%, black 0%, black 30%, transparent 70%)",
           maskImage: "radial-gradient(ellipse 90% 60% at 50% 50%, black 0%, black 30%, transparent 70%)",
@@ -42,7 +42,10 @@ export function Hero() {
 
       {/* Dark overlay to subtly dim the background and glows behind the text */}
       <div
-        className="absolute -top-40 left-[50%] -translate-x-[50%] w-[100vw] h-[100vh] z-0 pointer-events-none bg-black/30"
+        className="absolute -top-28 md:-top-40 left-[50%] -translate-x-[50%] w-[100vw] h-[100vh] z-0 pointer-events-none"
+        style={{
+          background: "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 60%, transparent 100%)",
+        }}
       />
 
       <div className="relative z-10 flex flex-col items-center justify-center w-full">

@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "Phorex Labz",
   description: "The ultimate community for gamers, coders, and creators.",
-  url: "https://phorexlabz.com",
+  url: "https://phorexlabz.vercel.app",
   links: {
     discord: "#",
-    twitter: "https://twitter.com/phorexlabz",
-    github: "https://github.com/phorexlabz",
+    twitter: "#",
+    github: "https://github.com/Phorex-Labz",
   },
 }

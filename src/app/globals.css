@@ -253,7 +253,8 @@
     justify-content: center;
     gap: 8px;
 }
-.btn-primary-animated:hover {
+.btn-primary-animated:hover,
+.btn-primary-animated:active {
     background-position: 100% 100%;
     box-shadow: 0 0 40px rgba(139,92,246,0.6);
     transform: translateY(-2px);
@@ -271,7 +272,8 @@
     justify-content: center;
     gap: 8px;
 }
-.btn-secondary-glass:hover {
+.btn-secondary-glass:hover,
+.btn-secondary-glass:active {
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.2);
     color: white;
@@ -287,7 +289,8 @@
     transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     cursor: default;
 }
-.category-chip:hover {
+.category-chip:hover,
+.category-chip:active {
     background: rgba(139, 92, 246, 0.15);
     border-color: rgba(139, 92, 246, 0.3);
     color: #c084fc;
@@ -299,7 +302,8 @@
     box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.05);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.glass-card:hover {
+.glass-card:hover,
+.glass-card:active {
     border-color: rgba(208, 188, 255, 0.3);
     box-shadow: 0 0 20px rgba(208, 188, 255, 0.1), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.1);
 }
@@ -315,6 +319,8 @@
     flex-direction: column;
     min-height: 200px;
     height: 100%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .eco-card::before {
@@ -333,13 +339,15 @@
     z-index: 1;
 }
 
-.eco-card:hover {
+.eco-card:hover,
+.eco-card:active {
     transform: translateY(-4px);
     box-shadow: 0 16px 40px rgba(0,0,0,0.4);
     background: var(--eco-hover-bg);
 }
 
-.eco-card:hover::before {
+.eco-card:hover::before,
+.eco-card:active::before {
     opacity: 1;
 }
 
@@ -358,7 +366,8 @@
     align-items: center;
     justify-content: center;
 }
-.btn-navbar-join:hover {
+.btn-navbar-join:hover,
+.btn-navbar-join:active {
     background-position: 100% 100%;
     box-shadow: 0 0 30px rgba(139,92,246,0.5);
     transform: translateY(-1px);
